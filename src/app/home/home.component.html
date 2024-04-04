@@ -1,0 +1,3 @@
+
+<app-missionlist *ngIf="!selectedMission" [missionList]="missionList" (selectMission)="selectMission($event)"></app-missionlist>
+<app-missiondetails *ngIf="selectedMission" [mission]="selectedMission"></app-missiondetails>

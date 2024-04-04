@@ -1,0 +1,39 @@
+
+<div class="mission-filter-container">
+
+    <!-- Sidebar for filtering by launch year -->
+    <div class="sidebar">
+      <h3>Launch Date</h3>
+      <div class="years-list">
+        <!-- These buttons should have an event binding to a function that filters missions by year -->
+        <button *ngFor="let year of launchYears" (click)="filterByYear(year)">{{ year }}</button>
+      </div>
+      <h3>Successful Launch</h3>
+      <button (click)="filterBySuccess(true)">true</button>
+      <button (click)="filterBySuccess(false)">false</button>
+      <div class="filters">
+        <h3>Successful Landing</h3>
+        <button (click)="filterBySuccessfulLanding(true)">Successful</button>
+        <button (click)="filterBySuccessfulLanding(false)">Unsuccessful</button>
+      </div>
+      <!-- Add similar buttons for Successful Land -->
+    </div>
+  
+    <!-- Mission cards display area -->
+    <div class="missions-display">
+      <div *ngFor="let mission of filteredMissions" class="mission-card">
+        <img src="{{ mission.links.mission_patch_small }}" alt="{{ mission.mission_name }}" class="mission-patch">
+        <div class="mission-details">
+          <h4 class="mission-title">{{ mission.mission_name }}</h4>
+          <p class="launch-year">Launch Year: {{ mission.launch_year }}</p>
+          <!-- Add additional mission details here -->
+          <p>Successful Launch: {{ mission.launch_success ? 'Yes' : 'No' }}</p>
+
+          
+          
+          <!-- Add other data points as needed -->
+        </div>
+      </div>
+    </div>
+  
+  </div>

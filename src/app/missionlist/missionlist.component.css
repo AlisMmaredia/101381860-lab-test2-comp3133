@@ -1,0 +1,76 @@
+/* Centered heading */
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 3em;
+  margin-top: 20px;
+}
+
+/* Card container */
+.mission-card {
+  background-color: #50a9dd; /* White background */
+  border-radius: 10%; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  margin: 30px auto; /* Centered with margin top & bottom */
+  padding: 20px;
+  max-width: 600px; /* Max card width */
+}
+
+/* Mission title styling */
+.mission-card .mission-title {
+  color: #1e90ff; /* Title color */
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+/* Year of launch styling */
+.mission-card .launch-year {
+  color: #808080; /* Grey color */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Details paragraph styling */
+.mission-card .details {
+  font-size: 1em;
+  line-height: 1.6; /* Line height for better readability */
+  color: #666; /* Lighter text color */
+}
+
+/* Image styling */
+.mission-card img.mission-patch {
+  float: left; /* Align image to the left */
+  margin-right: 15px; /* Space between image and text */
+  width: 80px; /* Image width */
+  height: auto; /* To maintain aspect ratio */
+}
+
+/* Clear float */
+.mission-card::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Button styles */
+.button {
+  background-color: #1e90ff; /* Blue background */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Add responsiveness to the card container */
+@media screen and (max-width: 600px) {
+  .mission-card {
+    margin: 20px; /* Add space on smaller screens */
+  }
+}
